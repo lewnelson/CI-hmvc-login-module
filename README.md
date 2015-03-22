@@ -1,9 +1,13 @@
 # CI hmvc login module
 A login module for CodeIgniter with Wiredesignz MX extensions - HMVC
 
+##**DEMO**
+
+http://lewnelson.com/projects/login_module/demo
+
 ###**DESCRIPTION**
 
-This is a login module designed and built to be used with Wiredesignz MX extensions for CodeIgniter. The module is contains the same setup as the demo version which can be found here.
+This is a login module designed and built to be used with Wiredesignz MX extensions for CodeIgniter. The module is contains the same setup as the demo version.
 
 It features user registration, password resets, forgotten username reminders, IP blacklisting, email address whitelisting, user timeouts, multiple account types and email verification. All of the features are customisable and some can be turned off entirely which makes this module very flexible.
 
