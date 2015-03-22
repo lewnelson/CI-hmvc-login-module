@@ -43,7 +43,7 @@ These can be completely customised with an endless number of account types. By d
 
 ###**REQUIREMENTS**
 
- - PHP mail
+ - sendmail for PHP's mail() function.
 
 ###**SETUP**
 
