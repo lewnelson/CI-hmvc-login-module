@@ -51,6 +51,7 @@ There are a number of steps for initial setup so I will list them here.
  1. Setup the login database with the tables. I have supplied a .sql file to import all the blank tables.
  2. Setup your default database. I have separated the login database from your apps default database for security reasons. This shouldn't affect how active record should use your default database though. Database user for login requires SELECT, UPDATE, INSERT and DELETE.
  2. Change base_url inside /application/config/config.php.
+ 3. Setup the CodeIgniter session encryption key.
  3. Change database settings inside /application/config/database.php. By default the app is setup to use a database called login. This can be changed by modifying /application/modules/login/models/mdl_login.php then changing the database to load inside the __construct method.
  4. Check /application/config/routes.php and modify default settings if you wish. Otherwise just leave them.
  5. Check /application/libraries/custom_constants.php modify default settings you wish to change. If you have changed any route settings then make sure to reflect these changes in the URL constants.
