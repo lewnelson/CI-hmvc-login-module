@@ -912,7 +912,7 @@ class Login extends MX_Controller {
 			
 			$current_time = time();
 			
-			$time_dif = $current_time - $passwd_reset_time) / 60) / 60;	// In hours
+			$time_dif = (($current_time - $passwd_reset_time) / 60) / 60;	// In hours
 			$valid_time = custom_constants::passwd_reset_valid_time;
 			
 			if($time_dif > $valid_time)
