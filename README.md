@@ -58,6 +58,6 @@ There are a number of steps for initial setup so I will list them here.
 
 ###**FURTHER CONFIGURATION**
 
-Once you have got the app setup with your desired settings you can begin to build your application around it. If you choose to follow the structuring I have used by using templates then each module will run the templates controller with a specified template.
+Once you have got the app setup with your desired settings you can begin to build your application around it. If you choose to follow the structuring I have used by using templates then each module will run the templates controller with a specified template passing the $data used to specify meta title and description. The $data will also tell the content view what modules and methods to run to get the view content.
 
 If you want to make a module only accessable for users logged in then just add check_user_login(); to the __construct method. This runs the function from inside the check_user_login_helper and checks if the user is logged in and that they have verified their email address. If you want the user to have logged in but they don't need to have verified their email address then just run the function passing FALSE as an argument like this check_user_login(FALSE); This way they will be able to access the module without having the verify their email address. Just remember check_user_login() checks email verification by default.
