@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+Options -Indexes
+DirectoryIndex index.php
+
+RewriteEngine on
+
+RewriteCond $1 !^(index\.php|sitemap\.xml|assets|robots\.txt|favicon\.ico)
+RewriteRule ^(.*)$ /index.php/$1 [L]
+
+SetEnvIfNoCase User-Agent "^libwww-perl*" block_bad_bots
+Deny from env=block_bad_bots
+
