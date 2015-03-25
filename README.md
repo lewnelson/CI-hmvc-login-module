@@ -52,6 +52,7 @@ These can be completely customised with an endless number of account types. By d
 ###**SETUP**
 
 There are a number of steps for initial setup so I will list them here.
+ 1. Rename /application/config/config.php.example to config.php. Also rename database.php.example and libraries/custom_constants.php.example removing the .example. Then configure database.php and config.php to your desired settings.
  1. Setup the login database with the tables. I have supplied a .sql file to import all the blank tables.
  2. Setup your default database. I have separated the login database from your apps default database for security reasons. This shouldn't affect how active record should use your default database though. Database user for login requires SELECT, UPDATE, INSERT and DELETE.
  2. Change base_url inside /application/config/config.php.
