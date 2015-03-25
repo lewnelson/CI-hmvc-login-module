@@ -75,14 +75,24 @@ else
 // If user has successfully registered
 if($registered === TRUE)
 {
-	echo "<p>You have successfully registered. You should receive an email
-	with a link to verify your email address. You must verify your email
-	address before you can access the site.</p>";
-	echo "<p>Make sure to check your spam folder just in case your email
-	has been filtered.</p>";
-	echo "<p>The email verification link is valid for 24 hours.</p>";
-	echo "<p>If you need a new verification email sent then please <a href='" . base_url() . custom_constants::new_email_ver_link_url . "'>click here</a>.</p>";
-	echo "<a href='" . base_url() . custom_constants::logout_url . "'>logout</a>";
+	if($email_verified === TRUE)
+	{
+		header('Refresh: 5; URL=' . base_url() . custom_constants::admin_page_url);
+		echo "<p>Thank you for registering. You are now setup to use the site.</p>";
+		echo "<p>You will now be directed to the admin page.</p>";
+		echo "<p>Please <a href='" . base_url() . custom_constants::admin_page_url . "'>click here</a> if you are not redirected.</p>";
+	}
+	else
+	{
+		echo "<p>You have successfully registered. You should receive an email
+		with a link to verify your email address. You must verify your email
+		address before you can access the site.</p>";
+		echo "<p>Make sure to check your spam folder just in case your email
+		has been filtered.</p>";
+		echo "<p>The email verification link is valid for 24 hours.</p>";
+		echo "<p>If you need a new verification email sent then please <a href='" . base_url() . custom_constants::new_email_ver_link_url . "'>click here</a>.</p>";
+		echo "<a href='" . base_url() . custom_constants::logout_url . "'>logout</a>";
+	}
 }
 else
 {

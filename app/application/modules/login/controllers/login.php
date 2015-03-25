@@ -432,6 +432,7 @@ class Login extends MX_Controller {
 				if($reg_user === FALSE)
 				{
 					// Successfully registered
+					$data['email_verified'] = $this->session->userdata('email_verified');
 					$data['registered'] = TRUE;
 				}
 				else
