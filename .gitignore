@@ -1,6 +1,3 @@
-*/application/config/database.php
-*/application/config/config.php
-*/application/libraries/custom_constants.php
 */application/logs/log-*.php
 */application/logs/!index.html
 */application/cache/*
