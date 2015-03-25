@@ -6,49 +6,49 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 $input['first_name'] = array(
 						"name" => "first_name",
-						"placeholder" => "first name(s)",
+						"placeholder" => "first name(s) *",
 						"maxlength" => "64",
 						"required" => "required"
 					);
 
 $input['surname'] = array(
 						"name" => "surname",
-						"placeholder" => "surname",
+						"placeholder" => "surname *",
 						"maxlength" => "64",
 						"required" => "required"
 					);
 
 $input['username'] = array(
 						"name" => "username",
-						"placeholder" => "Username",
+						"placeholder" => "username *",
 						"maxlength" => "24",
 						"required" => "required"
 					);
 					
 $input['email'] = array(
 						"name" => "email",
-						"placeholder" => "email address",
+						"placeholder" => "email address *",
 						"maxlength" => "320",
 						"required" => "required"
 					);
 
 $input['email_confirmation'] = array(
 						"name" => "email_confirmation",
-						"placeholder" => "confirm email address",
+						"placeholder" => "confirm email address *",
 						"maxlength" => "320",
 						"required" => "required"
 					);
 					
 $input['password'] = array(
 						"name" => "password",
-						"placeholder" => "password",
+						"placeholder" => "password *",
 						"maxlength" => "32",
 						"required" => "required"
 					);
 					
 $input['password_confirmation'] = array(
 						"name" => "password_confirmation",
-						"placeholder" => "confirm password",
+						"placeholder" => "confirm password *",
 						"maxlength" => "32",
 						"required" => "required"
 					);
@@ -88,6 +88,8 @@ else
 {
 		// Create the register user form
 		echo form_open(custom_constants::register_url);
+		
+		echo "<p>* denotes required field.</p>";
 
 		// Create our fields
 		echo form_input($input['first_name']);

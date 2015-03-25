@@ -25,7 +25,9 @@ echo "<div id='login-container'>";
 
 if($logged_in === TRUE)
 {
-	echo "You are already logged in. To check your username go to your account settings.";
+	echo "<p>You are already logged in. To check your username go to your account settings.</p>";
+	echo "<p><a href='" . base_url() . custom_constants::admin_page_url . "'>admin</a></p>";
+	echo "<p><a href='" . base_url() . custom_constants::logout_url . "'>logout</a></p>";
 }
 else
 {

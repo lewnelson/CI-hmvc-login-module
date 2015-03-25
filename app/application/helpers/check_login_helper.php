@@ -27,8 +27,20 @@ if(!function_exists('check_user_login'))
 				// Check that user has verified their email address
 				if($CI->session->userdata('email_verified') === FALSE)
 				{
-					// If they have not verified their email address direct them to the email verification page
-					redirect(base_url() . custom_constants::email_verification_url);
+					$CI->load->model("login/mdl_login");
+					$CI->mdl_login->set_table("login");
+					$user_id = $CI->session->userdata('user_id');
+					$query = $CI->mdl_login->get_where($user_id);
+					foreach($query->result() as $row)
+					{
+						$db_email_ver = $row->email_verified;
+					}
+					
+					if($db_email_ver !== "yes")
+					{
+						// If they have not verified their email address direct them to the email verification page
+						redirect(base_url() . custom_constants::email_verification_url);
+					}
 				}
 			}
 			

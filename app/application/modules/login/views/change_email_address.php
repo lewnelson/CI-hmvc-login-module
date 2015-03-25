@@ -34,6 +34,7 @@ if($new_email_successful === TRUE)
 	echo "<p>You have successfully updated your email. An email verification
 	link has been sent to.</p>";
 	echo "<p>{$new_email}</p>";
+	echo "<p>This link is valid for 24 hours.</p>";
 	echo "<p><a href='" . base_url() . custom_constants::logout_url . "'>logout</a></p>";
 }
 else

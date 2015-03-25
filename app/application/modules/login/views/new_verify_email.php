@@ -9,6 +9,7 @@ echo "<div id='login-container'>";
 echo "<p>New email verifification link sent to {$email}.</p>";
 echo "<p>If this email address is incorrect please change it by
 <a href='". base_url() . custom_constants::change_email_before_ver_url . "'>clicking here</a>.</p>";
+echo "<p><a href='" . base_url() . custom_constants::logout_url . "'>logout</a></p>";
 
 echo "</div>";
 
