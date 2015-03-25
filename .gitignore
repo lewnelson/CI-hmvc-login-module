@@ -3,3 +3,7 @@
 */application/cache/*
 */application/cache/!index.html
 */application/cache/!.htaccess
+*/application/config/database.php
+*/application/config/config.php
+*/application/libraries/custom_constants.php
+*/application/config/email.php
