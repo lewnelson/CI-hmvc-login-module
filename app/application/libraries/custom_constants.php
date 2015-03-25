@@ -130,7 +130,7 @@ class Custom_Constants {
 	 |	will not be able to register.
 	 */
 	 
-		const white_list = FALSE;
+		const white_list = TRUE;
 		
 	/*	-------------------------------------------------	*/
 
