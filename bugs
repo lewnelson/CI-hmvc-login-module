@@ -1,1 +1,1 @@
- - When user verifies email on a different device but is still logged in on the other they get stuck in a loop. Need to add a check inside the check_login_helper to check if user has verified email address.
+ -  **FIXED** When user verifies email on a different device but is still logged in on the other they get stuck in a loop. Need to add a check inside the check_login_helper to check if user has verified email address.
